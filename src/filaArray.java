@@ -35,12 +35,17 @@ public class filaArray {
     //sendo primeiro valor adicionado, e o primeiro a sair
     public void dequeue() {
         if (isEmpty()) {
-            System.out.println("fila vazia");
+            System.out.println("Fila vazia!");
             return;
         }
 
-        System.out.println("valor removido: " + fila[inicio]);
+        System.out.println("Valor removido: " + fila[inicio]);
         inicio++;
+
+        if (inicio > fim) {
+            inicio = 0;
+            fim = -1;
+        }
     }
     //front nao troca a fila, so mostra o PRIMEIRO valor adicionado. variavel inicio.
     public void front() {
